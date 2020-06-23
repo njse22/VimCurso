@@ -90,7 +90,7 @@ Una vez estemos ubicados en la palabra quizá queramos ir a la palabra siguiente
 
 <img src="figuras/vi29.gif" title="" alt="" data-align="center">
 
-### Edición de texto
+### Edición de
 
 Para editar un archivo de texto en Vim debemos entrar al modo *INSERT* para ello debemos presionar la tecla *i* nos daremos cuenta de que estamos en este modo porque en la parte inferior izquierda del editor.
 
@@ -138,7 +138,7 @@ En caso tal que queramos *pegar* **antes de** la línea donde esta nuestro curso
 
 <img src="figuras/vi23.gif" title="" alt="Figura 23. copiar y pegar en vim" data-align="center">
 
-Ahora veamos la opción de copiar, para copiar un texto primero debemos seleccionarlo, ¿cómo seleccionamos texto en Vim? para esto existe el modo *Visual* en el cual entramos con la tecla *v*
+Ahora veamos la opción de copiar, para copiar un texto primero debemos seleccionarlo, ¿cómo seleccionamos texto en Vim? Para esto existe el modo *Visual* en el cual entramos con la tecla *v*
 
 <img src="figuras/vi37.gif" title="" alt="" data-align="center">
 
@@ -162,7 +162,7 @@ Ahora que ya sabemos un poco más del uso de Vim, veamos como podemos deshacer y
 
 <img src="figuras/vi16.gif" title="" alt="Figura 16. undo en vim" data-align="center">
 
-Si por casualidad quieres devolverte a un cambio en el cual hiciste x cantidad de cambios puedes ver la *undolist*, estando **en el modo normal** escrive *:undolist*
+Si por casualidad quieres devolverte a un cambio en el cual hiciste x cantidad de cambios puedes ver la *undolist*, estando **en el modo normal** escribe *:undolist*
 
 <img src="figuras/vi17.gif" title="" alt="Figura 17. Undolist" data-align="center">
 
@@ -206,7 +206,7 @@ Si ahora por ejemplo agregamos *%* al principio del comando, esto es *:%s/palabr
 
 ¿Pero qué pasa si no quiero cambiar todas las palabras del documento? si agregas una *c* al final el editor te pedirá confirmación para remplazar las palabras, esto es  *:%s/palabraOriginal/nuevaPalabra/gc*
 
-<img src="figuras/vi43.gif" title="" alt="" data-align="center">/home/slayer-nation/Git/VimCurso/figuras/vi43.gif
+<img src="figuras/vi43.gif" title="" alt="" data-align="center">
 
 En la parte inferior aparecerán las siguientes opciones *y*, para confirmar el cambio; *n*, para omitirlo; *a*, para remplazar **todas** las coincidencias que están **después** del cursor; *l*, para cambiar la para coincidencia resaltada y salir de la operación; *q*, para salir de la operación; *^E* y *^Y* (esto es *Ctrl + e* y *Ctrl + y* respectivamente) para movernos hacia abajo y hacia arriba en el documento mientras estamos en este modo.
 
@@ -326,13 +326,13 @@ Nota: la  camilla (*"*) se usa para dejar comentarios.
 
 8. *set encoding=utf-8* " coloca los archivos que crees en formato *utf-8*
 
-9. set wildmenu " despliega el menú de opciones con tab
+9. *set wildmenu* " despliega el menú de opciones con tab
    
    <img src="figuras/vi59.gif" title="" alt="" data-align="center">
 
 ### Plugins en Vim
 
-Para finalizar, veamos como instalar Plugins (en [2] esta el enlace de dondo yo busco pluginsUntitled) en Vim y revisemos algunos que podrías ser útiles, otros que solo son para personalizar como por ejemplo los temas.
+Para finalizar, veamos como instalar Plugins (en [2] esta el enlace de donde yo busco plugins) en Vim y revisar algunos que podrías ser útiles, otros que solo son para personalizar como por ejemplo los temas.
 
 Para empezar debes instalar un gestor de plugins en este caso, vamos a usar [vim-plug](https://github.com/junegunn/vim-plug) puedes ir al repositorio y ver las  instrucciones para instalarlo según sea tu caso.
 
@@ -431,7 +431,7 @@ Con este último plugin instalado, al abrir nerdtree seleccionas el archivo que 
 
 #### Crear atajos o *alias*
 
-en el archivo de configuración *.vimrc* también podrías crear atajos o *alias* para los comandos que consideras que usas mas, por ejemplo para salir de Vim usamos *:q* podríasmos hacer un atajo para que sea unicamente con *q*
+en el archivo de configuración *.vimrc* también podrías crear atajos o *alias* para los comandos que consideras que usas mas, por ejemplo para salir de Vim usamos *:q* podríamos hacer un atajo para que sea únicamente con *q*
 
 ```vim
 nmap <Leader>q :q<CR>
@@ -443,10 +443,9 @@ Ahora para salir del editor lo único que deberías de hacer es presionar la tec
 
 
 
-### Reaferencias y recursos
+### Referencias y recursos
 
 [1] *Vim: help.txt*. (n.d.). Retrieved June 23, 2020, from https://vimhelp.org/
 
 [2] *Syntastic - Vim Awesome*. (n.d.). Retrieved June 23, 2020, from https://vimawesome.com/
-
-
+t 
