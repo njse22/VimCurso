@@ -88,7 +88,7 @@ Supongamos a hora que quieres buscar una palabra en el archivo, esto lo puedes h
 
 Una vez estemos ubicados en la palabra quizá queramos ir a la palabra siguiente (ten en cuanta que si buscaste con */palabra* la siguiente coincidencia estará **después** del cursor; y si buscaste con *?palabra* la siguiente coincidencia estará **antes** del cursor), para ello presionamos *Enter* y después *n*, si por alguna razón quieres ir a la coincidencia anterior lo puedes hacer con *N*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi29.gif" title="" alt="vi29.gif" data-align="center">
+<img src="figuras/vi29.gif" title="" alt="" data-align="center">
 
 ### Edición de texto
 
@@ -102,7 +102,7 @@ En este modo podremos empezar a editar partir del lugar donde esté ubicado nues
 
 Supongamos que quieres agregar una nueva linea de comentario a tu código, esto lo puedes hacer con  la tecla *o* para agregar una nueva linea **debajo** de la línea en la cual se encuentra el cursor y *O* ('*O*' mayúscula) para agregar una línea **arriba** de donde está el cursor
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi37.gif" title="" alt="vi37.gif" data-align="center">
+<img src="figuras/vi37.gif" title="" alt="" data-align="center">
 
 Para eliminar texto **en el modo normal** lo haremos con presionando la tecla *x*
 
@@ -140,19 +140,19 @@ En caso tal que queramos *pegar* **antes de** la línea donde esta nuestro curso
 
 Ahora veamos la opción de copiar, para copiar un texto primero debemos seleccionarlo, ¿cómo seleccionamos texto en Vim? para esto existe el modo *Visual* en el cual entramos con la tecla *v*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi34.gif" title="" alt="vi34.gif" data-align="center">
+<img src="figuras/vi37.gif" title="" alt="" data-align="center">
 
 Estando en este modo podremos seleccionar texto con sólo mover nuestro cursor
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi35.gif" title="" alt="vi35.gif" data-align="center">
+<img src="figuras/vi35.gif" title="" alt="" data-align="center">
 
 Una vez seleccionado el texto podremos copiarlo con la tecla *y* y pegarlo de la misma forma que hemos visto antes con la tecla *p*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi36.gif" title="" alt="vi36.gif" data-align="center">
+<img src="figuras/vi36.gif" title="" alt="" data-align="center">
 
 Quizá en algún momento quieras copiar todo el contenido de un archivo de texto diferente a archivo en el que estas, esto lo puedes hacer con *:r archivo* lo que copiara el contenido de *archivo* en tu archivo actual.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi38.gif" title="" alt="vi38.gif" data-align="center">
+<img src="figuras/vi38.gif" title="" alt="" data-align="center">
 
 Nota: más adelante en *Algunos comandos de Vim* veremos como seleccionar lineas especificar del texto con *:r* (para Linux)
 
@@ -180,7 +180,7 @@ Veamos ahora como podemos remplazar palabras, si por ejemplo yo quiero remplazar
 
 Si quieres cambiar más de una letra en la misma palabra puedes hacerlo con *R*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi39.gif" title="" alt="vi39.gif" data-align="center">
+<img src="figuras/vi39.gif" title="" alt="" data-align="center">
 
 Por lo general necesitamos cambiar más de una sola letra, así que veamos como remplazar toda una palabra o parte de ella, en caso tal de que yo quiera remplazar toda una palabra lo puedo hacer con *c + i + w*
 
@@ -194,19 +194,19 @@ Nota: cuando usas a alguno de estos comandos debes presionar la tecla *Esc* para
 
 Ahora veamos como podemos remplazar una palabra que se repite varias veces en el archivo (por ejemplo el nombre de una variable, o la llamada a un método), para esto tenemos estas opciones *:s/palabra/nuevaPalabra*, la cual encuentra la primera coincidencia (que esté en la línea donde tienes el cursor) con *'palabra'* y la remplaza por *'nuevaPalabra'*.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi40.gif" title="" alt="vi40.gif" data-align="center">
+<img src="figuras/vi40.gif" title="" alt="" data-align="center">
 
 Si a la opción anterior le agregamos una *g*, es decir  *:s/palabra/nueva/g*, le estamos indicando al editor que cambie todas las coincidencias con *'palabra'* en la misma linea donde está el cursor por *'nuevaPalabra'*.
 
-<img title="" src="file:///home/slayer-nation/Git/VimCurso/figuras/vi41.gif" alt="vi41.gif" data-align="center">
+<img src="figuras/vi41.gif" title="" alt="" data-align="center">
 
 Si ahora por ejemplo agregamos *%* al principio del comando, esto es *:%s/palabra/nueva/g*, lo que le estaremos indicando al editor es que cambie **todas** las coincidencias de *palabra* por *nuevaPalbra* en el archivo
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi42.gif" title="" alt="vi42.gif" data-align="center">
+<img src="figuras/vi42.gif" title="" alt="" data-align="center">
 
 ¿Pero qué pasa si no quiero cambiar todas las palabras del documento? si agregas una *c* al final el editor te pedirá confirmación para remplazar las palabras, esto es  *:%s/palabraOriginal/nuevaPalabra/gc*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi43.gif" title="" alt="vi43.gif" data-align="center">
+<img src="figuras/vi43.gif" title="" alt="" data-align="center">/home/slayer-nation/Git/VimCurso/figuras/vi43.gif
 
 En la parte inferior aparecerán las siguientes opciones *y*, para confirmar el cambio; *n*, para omitirlo; *a*, para remplazar **todas** las coincidencias que están **después** del cursor; *l*, para cambiar la para coincidencia resaltada y salir de la operación; *q*, para salir de la operación; *^E* y *^Y* (esto es *Ctrl + e* y *Ctrl + y* respectivamente) para movernos hacia abajo y hacia arriba en el documento mientras estamos en este modo.
 
@@ -216,45 +216,45 @@ En la parte inferior aparecerán las siguientes opciones *y*, para confirmar el 
 
 El comando *:!* es usado para ejecutar comandos de Shell mientras estas en una sesión de Vim
 
-<img title="" src="file:///home/slayer-nation/Git/VimCurso/figuras/vi44.gif" alt="vi44.gif" data-align="center">
+<img src="figuras/vi44.gif" title="" alt="" data-align="center">
 
 En la figura de arriba ejecute el comando *:! ls -la* para listar los archivos de la carpeta en la cual me encontraba, acto seguido se despliega la lista de archivos y al dar *Enter* regreso al editor, esto es particularmente útil si por ejemplo quieres ejecutar código cada vez que agregas funcionalidades al mismo.
 
 Supongamos ahora que queremos crear un archivo de texto con información del equipo como la versión del kernel, este tipo de cosas se pueden lograr combinando el comando *:r* y *:!*, para este ejemplo particular sería con *:r ! uname -v*, el texto se insertará en el archivo en la **línea siguiente** en la cual se encuentra el cursor.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi46.gif" title="" alt="vi46.gif" data-align="center">
+<img src="figuras/vi46.gif" title="" alt="" data-align="center">
 
 Anteriormente te dije que podías usar *:r archivo* para copiar todo el contenido de un archivo en Vim, veamos ahora como tomar solo las lineas que me interesan, esto lo haremos con ayuda de *:!*; si por ejemplo quiero tomar las líneas cinco a siete de otro archivo de texto lo puedo hacer con *:r !sed -n 5,7p archivo*
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi47.gif" title="" alt="vi47.gif" data-align="center">
+<img src="figuras/vi47.gif" title="" alt="" data-align="center">
 
 #### Comandos *Ex*, *Vex* y *Sex*
 
 El comando *Ex* es la abreviatura de *Explore* y se usa para *explorar* dentro de la carpeta de archivos en la cual abriste Vim
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi48.gif" title="" alt="vi48.gif" data-align="center">
+<img src="figuras/vi48.gif" title="" alt="" data-align="center">
 
 En caso tal de que quieras volver al archivo anterior puedes volver a ejecutar *:Ex* y buscar el archivo, o también puedes aprovechar el *Buffer* de navegación que ya conocemos (*Ctrl +o* y *Ctrl + i* para navegar hacia adelante y hacia atrás)
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi49.gif" title="" alt="vi49.gif" data-align="center">
+<img src="figuras/vi49.gif" title="" alt="" data-align="center">
 
 Los comandos *Vex* y *Sex* son algo parecidos, *Sex* usan para abrir el directorio actual de forma horizontal y *Vex* los habré de forma vertical, de esta forma podemos abrir dos (o más) archivos en el mismo editor de Vim.
 
 Nota: Para salir de la ventana dividida usamos *:q* (o *:wq* si queremos guardar algún cambio en el archivo que hayamos abierto)
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi50.gif" title="" alt="vi50.gif" data-align="center">
+<img src="figuras/vi50.gif" title="" alt="" data-align="center">
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi51.gif" title="" alt="vi51.gif" data-align="center">
+<img src="figuras/vi51.gif" title="" alt="" data-align="center">
 
 #### El comando *spell*
 
 El comando *spell* es utilizado para verificar la gramatica del idioma que le indiquemos, por defecto en ingles (también te voy a explicar como configurarlo para español), si quieres verificar la ortografía de tu archivo usas el comando *:set spell*, el editor resaltara en rojo
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi52.gif" title="" alt="vi52.gif" data-align="center">
+<img src="figuras/vi52.gif" title="" alt="" data-align="center">
 
 Ahora, ¿cómo podemos corregir los errores?, con el cursor nos paramos en la palabra que queremos corregir y presionamos las teclas *z =*, nos aparecerá una lista con las posibles opciones para corregir la palabra, seleccionamos la opción por la cual queremos remplazar la palabra y damos enter.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi53.gif" title="" alt="vi53.gif" data-align="center">
+<img src="figuras/vi53.gif" title="" alt="" data-align="center">
 
 Si estás leyendo esto, lo más probable es que seas de aula hispana y te interese tener esta opción para corregir palabras en español, bueno veamos ahora como configurar *spell* para español, para cambiar el idioma a español se utiliza el siguiente comando *:set spelllang=es*, en este caso particular Vim te marcara un error indicando que **no** tienes el paquete del idioma instalado, algo como esto:
 
@@ -274,7 +274,7 @@ Downloading fr.utf-8.spl...
 :!curl 'http://ftp.vim.org/pub/vim/runtime/spell/es.utf-8.spl' -o '/tmp/v9SMuXV/0.spl'
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-"/tmp/vu98ZTF/2.spl" [noeol] 1122L, 571626C
+"/tmp/v9SMuXV/0.spl" [noeol] 1122L, 571626C
 In which directory do you want to write the file:
 1. /home/youruser/.vim/spell
 [C]ancel, (1):
@@ -292,13 +292,13 @@ Después de darle *y* creará los archivos, *~/.vim/spell/es.utf-8.spl* y *~/.vi
 
 Una vez instalados los paquetes podrás cambiar el idioma y usar el comando como ya lo hemos visto
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi54.gif" title="" alt="vi54.gif" data-align="center">
+<img src="figuras/vi54.gif" title="" alt="" data-align="center">
 
 ### Configuración de Vim
 
 Ahora vamos a ver como configurar nuestro archivo *.vimrc* para personalizar nuestro editor de texto, estos son algunos de los comandos que podemos usar para ello (si, también podemos dejar un idioma por defecto para no configurar *spell* en cada archivo que abramos), configurar el archivo *.vimrc* es tan sencillo como abrirlo y escribir los comandos que queremos aplicar a nuestro editor, como se ve en esta imagen.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi60.png" title="" alt="vi60.png" data-align="left">
+<img src="figuras/vi60.png" title="" alt="" data-align="center">
 
 Nota: la  camilla (*"*) se usa para dejar comentarios.
 
@@ -306,29 +306,29 @@ Nota: la  camilla (*"*) se usa para dejar comentarios.
 
 2. *set number* " para habilitar los índices de la línea en el lado izquierdo del editor
    
-   <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi55.png" title="" alt="vi55.png" data-align="center">
+   <img src="figuras/vi55.png" title="" alt="" data-align="center">
 
 3. *set mouse=a* " para poder interactuar con el mouse (si, no estás obligado a usar solamente el teclado en Vim)
    
-   <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi56.gif" title="" alt="vi56.gif" data-align="center">
+   <img src="figuras/vi56.gif" title="" alt="" data-align="center">
 
 4. *syntax enable* " habilita la sintaxis de lenguaje en Vim (que resalte con colores las palabras clave del lenguaje de programación, así como los tipos de datos)
 
 5. *laststatus=2* "habilita la barra inferior del editor (en algunas imágenes de este documento se puede ver)
    
-   <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi57.png" title="" alt="vi57.png" data-align="center">
+   <img src="figuras/vi57.png" title="" alt="" data-align="center">
 
 6. *set sw=2* " cambia el espacio de identado a dos espacios (por defecto Vim tiene el identado en **ocho espacios**)
 
 7. *set relativenumber* " agrega la *posición relativa del cursor* es decir a cuantas líneas por arriba o por abajo están las demás de tu posición actual.
    
-   <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi58.gif" title="" alt="vi58.gif" data-align="center">
+   <img src="figuras/vi58.gif" title="" alt="" data-align="center">
 
 8. *set encoding=utf-8* " coloca los archivos que crees en formato *utf-8*
 
 9. set wildmenu " despliega el menú de opciones con tab
    
-   <img title="" src="file:///home/slayer-nation/Git/VimCurso/figuras/vi59.gif" alt="vi59.gif" data-align="center">
+   <img src="figuras/vi59.gif" title="" alt="" data-align="center">
 
 ### Plugins en Vim
 
@@ -368,7 +368,7 @@ colorscheme forest-night
 
 El tema se ve así:
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi61.png" title="" alt="vi61.png" data-align="center">
+<img src="figuras/vi61.png" title="" alt="" data-align="center">
 
 Un plugin que podría serte útil es nerdtree, agrega la navegación de archivos, para instalarlo, nuevamente usas la palabra clave *Plug*
 
@@ -403,7 +403,7 @@ nmap <Leader>nt :NERDTreeFind<CR>
 
 Ahora te preguntarás, ¿cómo uso eso? es sencillo presionas *'tecla lider'* y seguido a esto presionas la combinación de teclas *nt* esto escribirá el comando *:NERDTreeFind* en la entrada de comandos ( *< CR >*  indica un *Enter*).
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi62.gif" title="" alt="vi62.gif" data-align="center">
+<img src="figuras/vi62.gif" title="" alt="" data-align="center">
 
 Ahora estarás pensando que es lo mismo que usar el comando *Vex* pero en este caso si presionas la tecla *m*, abrirás el menú de *nerdtree*, con el cual podemos gestionar los archivos (agregar, mover, eliminar, copiar, etc)
 
@@ -439,7 +439,7 @@ nmap <Leader>q :q<CR>
 
 Ahora para salir del editor lo único que deberías de hacer es presionar la tecla *espacio + q* 
 
-![vi63.gif](/home/slayer-nation/Git/VimCurso/figuras/vi63.gif)
+<img src="figuras/vi63.gif" title="" alt="" data-align="center">
 
 
 
