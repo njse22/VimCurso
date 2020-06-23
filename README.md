@@ -248,7 +248,7 @@ Nota: Para salir de la ventana dividida usamos *:q* (o *:wq* si queremos guardar
 
 #### El comando *spell*
 
-El comando *spell* es utilizado para verificar la gramatica del idioma que le indiquemos, por defecto en ingles (también te voy a explicar como configurarlo para español), si quieres verificar la ortografía de tu archivo usas el comando *:set spell*, el editor resaltara en rojo
+El comando *spell* es utilizado para verificar la gramatica del idioma que le indiquemos, por defecto en ingles (también te voy a explicar como configurarlo para español), si quieres verificar la ortografía de tu archivo usas el comando *:set spell*, el editor resaltara las palabras que estan mal escritas. 
 
 <img src="figuras/vi52.gif" title="" alt="" data-align="center">
 
