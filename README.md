@@ -1,7 +1,6 @@
 # Curso Rápido de Vim
 
-Hace un tiempo empece a utilizar vi como editor de texto en el proceso aprendí a "las malas" como dicen algunos; el siguiente documento es una guía para aquellos que quieran empezar a usar vi, la misma está organizada de la siguiente forma: empezaremos con los comandos básicos de Vim, para abrir, cerrar y guardar archivos; luego veremos como podemos navegar dentro del editor; después se hablará de la edición de texto, insertar, eliminar, copiar, cortar y pegar texto; pasaremos después a ver el funcionamiento de los comandos *undo* y *redo*; seguido a esto veremos como remplazar y cambiar palabras; para después ver algunos comandos, que nos pueden ayudar bien sea para ejecutar comandos de Shell estando en Vim, abrir más de un archivo en el mismo editor e identificar el idioma de nuestro archivo y finalmente veremos como podemos configurar el archivo *.vimrc* y agregar *plugins* a nuestro editor.
-
+Hace un tiempo empece a utilizar vi como editor de texto en el proceso aprendí a "las malas" como dicen algunos; el siguiente documento es una guía para aquellos que quieran empezar a usar vi, la misma está organizada de la siguiente forma: empezaremos con los comandos básicos de Vim, para abrir, cerrar y guardar archivos; luego veremos como podemos navegar dentro del editor; después se hablará de la edición de texto, insertar, eliminar, copiar, cortar y pegar texto; pasaremos después a ver el funcionamiento de los comandos *undo* y *redo*; seguido a esto veremos como remplazar y cambiar palabras; para después ver algunos comandos, que nos pueden ayudar bien sea para ejecutar comandos de Shell estando en Vim, abrir más de un archivo en el mismo editor e identificar el idioma (*Grammar Check*) de nuestro archivo y finalmente veremos como podemos configurar el archivo *.vimrc* y agregar *plugins* a nuestro editor.
 
 ### Comandos básicos de Vim
 
@@ -157,7 +156,6 @@ Quizá en algún momento quieras copiar todo el contenido de un archivo de texto
 
 Nota: más adelante en *Algunos comandos de Vim* veremos como seleccionar lineas especificar del texto con *:r* (para Linux)
 
-
 ### Deshacer y rehacer (undo  y redo)
 
 Ahora que ya sabemos un poco más del uso de Vim, veamos como podemos deshacer y rehacer texto, el primero se hace simplemente con la tecla *u*
@@ -250,7 +248,7 @@ Nota: Para salir de la ventana dividida usamos *:q* (o *:wq* si queremos guardar
 
 #### El comando *spell*
 
-El comando *spell* es utilizado para verificar el idioma, por defecto en ingles (también te voy a explicar como configurarlo para español), si quieres verificar la ortografía de tu archivo usas el comando *:set spell*, el editor resaltara en rojo
+El comando *spell* es utilizado para verificar la gramatica del idioma que le indiquemos, por defecto en ingles (también te voy a explicar como configurarlo para español), si quieres verificar la ortografía de tu archivo usas el comando *:set spell*, el editor resaltara en rojo
 
 <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi52.gif" title="" alt="vi52.gif" data-align="center">
 
@@ -314,7 +312,7 @@ Nota: la  camilla (*"*) se usa para dejar comentarios.
    
    <img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi56.gif" title="" alt="vi56.gif" data-align="center">
 
-4. *syntax enable* " habilita la sintaxis de lenguaje en Vim (que resalte con colores las palabras como cualquier IDE)
+4. *syntax enable* " habilita la sintaxis de lenguaje en Vim (que resalte con colores las palabras clave del lenguaje de programación, así como los tipos de datos)
 
 5. *laststatus=2* "habilita la barra inferior del editor (en algunas imágenes de este documento se puede ver)
    
@@ -334,7 +332,7 @@ Nota: la  camilla (*"*) se usa para dejar comentarios.
 
 ### Plugins en Vim
 
-Para finalizar, veamos como instalar Plugins en Vim y revisemos algunos que podrías ser útiles, otros que solo son para personalizar como por ejemplo los temas.
+Para finalizar, veamos como instalar Plugins (en [2] esta el enlace de dondo yo busco pluginsUntitled) en Vim y revisemos algunos que podrías ser útiles, otros que solo son para personalizar como por ejemplo los temas.
 
 Para empezar debes instalar un gestor de plugins en este caso, vamos a usar [vim-plug](https://github.com/junegunn/vim-plug) puedes ir al repositorio y ver las  instrucciones para instalarlo según sea tu caso.
 
@@ -428,4 +426,27 @@ nmap <Leader>nt :NERDTreeFind<CR>
 ```
 
 Con este último plugin instalado, al abrir nerdtree seleccionas el archivo que quieres abrir y con *Ctrl + l* y *Ctrl + h* podrás navegar entre archivos.
+
+
+
+#### Crear atajos o *alias*
+
+en el archivo de configuración *.vimrc* también podrías crear atajos o *alias* para los comandos que consideras que usas mas, por ejemplo para salir de Vim usamos *:q* podríasmos hacer un atajo para que sea unicamente con *q*
+
+```vim
+nmap <Leader>q :q<CR>
+```
+
+Ahora para salir del editor lo único que deberías de hacer es presionar la tecla *espacio + q* 
+
+![vi63.gif](/home/slayer-nation/Git/VimCurso/figuras/vi63.gif)
+
+
+
+### Reaferencias y recursos
+
+[1] *Vim: help.txt*. (n.d.). Retrieved June 23, 2020, from https://vimhelp.org/
+
+[2] *Syntastic - Vim Awesome*. (n.d.). Retrieved June 23, 2020, from https://vimawesome.com/
+
 
