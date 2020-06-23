@@ -46,11 +46,11 @@ Finalmente para movernos al **final de la palabra siguiente** lo haremos con la 
 
 Quizá quieras moverte una cantidad *'n'* de palabras (hacia *arriba, abajo, izquierda o derecha*), para ello puedes combinar los operadores *h, j, k, l, w, b, e* con el número *'n'* de palabras que deseas moverte, por ejemplo si quieres ir cuatro **palabras** **delante del cursor** lo harías con *4 + w*.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi31.gif" title="" alt="vi31.gif" data-align="center">
+<img src="figuras/vi31.gif" title="" alt="Figura 31. salto 4 palabras con w" data-align="center">
 
 De igual forma si lo que quieres es moverte cuatro **palabras detrás del cursor** lo harías con *4 + b*, si por alguna razón quieres moverte cuatro **letras delante del cursor** lo podrías hacer con *4 + l*.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi32.gif" title="" alt="vi32.gif" data-align="center">
+<img src="figuras/vi32.gif" title="" alt="Figura 32. salto 4 letras con l" data-align="center">
 
 Si estás pensando usar Vim para programar esto te va a ser útil, puedes ir a la definición de un método o una variable presionando *g + d*, en este ejemplo tenemos la variable *option* (el código no es importante)
 
@@ -60,13 +60,13 @@ Fíjate como desde diferentes partes del código la combinación de teclas nos l
 
 Algo que quizá quieras hacer es ir a donde abriste y/o cerraste un *paréntesis, llave o corchete*, esto lo puedes hacer estando en el **modo normal** con el cursor sobre el *paréntesis, llave o corchete* (puede ser el de apertura o cierre) y presionando la tecla *%*, esto llevara al cursor al siguiente *paréntesis, llave o corchete* es decir, si por ejemplo estoy en la llave de apretura de un método lo que hará es llevarme a la llave de cierre de dicho método.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi33.gif" title="" alt="vi33.gif" data-align="center">
+<img src="figuras/vi33.gif" title="" alt="Figura 33. salto a parentesis" data-align="center">
 
 Veamos algo más interesante como podemos navegar entre archivos; en caso tal de que estemos importando alguna clase o librería propia y queramos ver su definición podemos ir hasta dicho archivo con las teclas *g + f* estando nuestro cursor sobre el llamado a dicha clase o librería
 
 Nota: para poder hacer esto debes de haber guardado todos los cambios en el archivo actual.
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi11.gif" title="" alt="Figura 11 navegar entre archivos en vim" data-align="center">
+<img src="figuras/vi11.gif" title="" alt="Figura 11. navegar entre archivos en vim" data-align="center">
 
 Vim tiene un *Buffer de navegación* lo que quiere decir que la acción anterior creó una 'lista' de acciones, para **devolvernos a la acción anterior** en este punto (volver al archivo principal) lo que debemos hacer es presionar *Ctrl + o*
 
@@ -80,7 +80,7 @@ Otra cosa que podríamos necesitar hacer es ir al principio, al final o a una l�
 
 Nota: con *Ctrl + G* verás en que linea te encuentras dentro de Vim (más adelante en *Configuración de Vim* te mostraré como habilitar los índices de las líneas al lado izquierdo del editor).
 
-<img src="file:///home/slayer-nation/Git/VimCurso/figuras/vi30.png" title="" alt="vi30.png" data-align="center">
+<img src="figuras/vi30.png" title="" alt="" data-align="center">
 
 Supongamos a hora que quieres buscar una palabra en el archivo, esto lo puedes hacer con *'/palabra'* para buscar en el archivo **después del cursor**, y con *'?palabra'* para buscar **antes del cursor**.
 
