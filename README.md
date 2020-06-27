@@ -330,6 +330,18 @@ Nota: la  camilla (*"*) se usa para dejar comentarios.
    
    <img src="figuras/vi59.gif" title="" alt="" data-align="center">
 
+### Crear atajos o *alias*
+
+en el archivo de configuración *.vimrc* también podrías crear atajos o *alias* para los comandos que consideras que usas mas, por ejemplo para salir de Vim usamos *:q* podríamos hacer un atajo para que sea únicamente con *q*
+
+```vim
+nmap <Leader>q :q<CR>
+```
+
+Ahora para salir del editor lo único que deberías de hacer es presionar la tecla *espacio + q*
+
+<img src="figuras/vi63.gif" title="" alt="" data-align="center">
+
 ### Plugins en Vim
 
 Para finalizar, veamos como instalar Plugins (en [2] esta el enlace de donde yo busco plugins) en Vim y revisar algunos que podrías ser útiles, otros que solo son para personalizar como por ejemplo los temas.
@@ -425,23 +437,9 @@ let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
 ```
 
-Con este último plugin instalado, al abrir nerdtree seleccionas el archivo que quieres abrir y con *Ctrl + l* y *Ctrl + h* podrás navegar entre archivos.
+Con este último plugin instalado, al abrir nerdtree seleccionas el archivo que quieres abrir y con *Ctrl + l* y *Ctrl + h* podrás navegar entre las ventanas del editor. 
 
-
-
-#### Crear atajos o *alias*
-
-en el archivo de configuración *.vimrc* también podrías crear atajos o *alias* para los comandos que consideras que usas mas, por ejemplo para salir de Vim usamos *:q* podríamos hacer un atajo para que sea únicamente con *q*
-
-```vim
-nmap <Leader>q :q<CR>
-```
-
-Ahora para salir del editor lo único que deberías de hacer es presionar la tecla *espacio + q* 
-
-<img src="figuras/vi63.gif" title="" alt="" data-align="center">
-
-
+<img src="figuras/vi64.gif" title="" alt="" data-align="center">
 
 ### Referencias y recursos
 
